@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+<!-- Classifier -->
+    <record id="classifier_tree" model="ir.ui.view">
+        <field name="model">classifier</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Classifiers" colors="">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+        <record id="classifier_form" model="ir.ui.view">
+            <field name="model">classifier</field>
+            <field name="arch" type="xml">
+                <form string="Classifiers" version="7.0">
+                   <sheet>
+                    <label for="name" class="oe_edit_only"/>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <group name="category_group" string="Categories" colspan="4">
+                        <field name="category_ids" nolabel="1">
+                            <form string="Category">
+                                <sheet>
+                                    <label for="name" class="oe_edit_only"/>
+                                    <h1>
+                                        <field name="name"/>
+                                    </h1>
+                                    <group>
+                                        <field name="classifier_id" invisible="1"/>
+                                        <field name="counter" readonly="1"/>
+                                    </group>
+                                </sheet>
+                            </form>
+
+                        </field>
+                    </group>
+                    <group name="training_group" string="Trainings" colspan="4">
+                        <field name="train_features_ids" nolabel="1">
+                            <tree >
+                                <field name="category_id"/>
+                                <field name="classifier_id" invisible="1"/>
+                                <field name="feature"/>
+                                <field name="counter"/>
+                            </tree>
+                        </field>
+
+                    </group>
+                  </sheet>
+                </form>
+            </field>
+        </record>
+
+
+    <record id="classifier_filter" model="ir.ui.view">
+        <field name="model">classifier</field>
+        <field name="type">search</field>
+        <field name="arch" type="xml">
+            <search string="">
+               <field name="name"/>
+           </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_classifier_view">
+        <field name="name">Classifiers</field>
+        <field name="res_model">classifier</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="classifier_filter"/>
+    </record>
+
+    <menuitem name="Classifiers" parent="document.menu_document_management_configuration" action="action_classifier_view" id="classifier_main"/>
+
+<!-- Train -->
+    <record id="train_tree" model="ir.ui.view">
+        <field name="model">classifier.train.feature</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Trainings">
+                <field name="classifier_id"/>
+                <field name="category_id"/>
+                <field name="feature"/>
+                <field name="counter"/>
+            </tree>
+        </field>
+    </record>
+
+<!-- Categories -->
+    <record id="classifier_category_tree" model="ir.ui.view">
+        <field name="model">classifier.category</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="Categories" colors="">
+                <field name="name"/>
+                <field name="classifier_id"/>
+                <field name="counter"/>
+            </tree>
+        </field>
+    </record>
+
+        <record id="classifier_category_form" model="ir.ui.view">
+            <field name="model">classifier.category</field>
+            <field name="arch" type="xml">
+                <form string="classifier.category" version="7.0">
+                   <sheet>
+                    <label for="name" class="oe_edit_only"/>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <group>
+                        <group>
+                            <field name="counter" readonly="1" />
+                        </group>
+                        <group>
+                            <field name="classifier_id" readonly="1" />
+                        </group>
+                    </group>
+                  </sheet>
+                </form>
+            </field>
+        </record>
+
+
+    <record id="classifier_category_filter" model="ir.ui.view">
+        <field name="model">classifier.category</field>
+        <field name="type">search</field>
+        <field name="arch" type="xml">
+            <search string="">
+               <field name="name"/>
+           </search>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_classifier_category_view">
+        <field name="name">Categories</field>
+        <field name="res_model">classifier.category</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="classifier_category_filter"/>
+    </record>
+
+    <menuitem name="Categories" parent="document.menu_document_management_configuration" action="action_classifier_category_view" id="classifier_category_main"/>
+
+
+</data>
+</openerp>

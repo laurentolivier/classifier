@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+        <record id="classifier_guesser_wiz_form" model="ir.ui.view">
+            <field name="model">classifier.guesser.wiz</field>
+            <field name="arch" type="xml">
+                <form string="Classifier Guesser" version="7.0">
+                    <group name="Guess_group" string="Guess" colspan="4">
+                        <field name="classifier_ids"/>
+                    </group>
+                    <footer>
+                        <button name="wizard_guess" string="Guess!" type="object" class="oe_highlight"/> or
+                        <button string="Cancel" special="cancel" class="oe_link"/>
+                    </footer>
+
+                </form>
+            </field>
+        </record>
+
+    <act_window id="action_wizard_guess"
+        key2="client_action_multi" name="Guess Classifier"
+        res_model="classifier.guesser.wiz" src_model="ir.attachment"
+        view_mode="form" target="new" view_type="form" />
+
+</data>
+</openerp>

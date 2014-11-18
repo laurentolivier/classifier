@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+        <record id="classifier_trainer_wiz_form" model="ir.ui.view">
+            <field name="model">classifier.trainer.wiz</field>
+            <field name="arch" type="xml">
+                <form string="Classifier Trainer" version="7.0">
+
+                    <group name="train_group" string="Train" colspan="4">
+                        <field name="classifier_id" invisible="1"/>
+                        <field name="category_id" domain="[('classifier_id','=',classifier_id)]"/>
+                        <field name="name" colspan="4"/>
+                    </group>
+                    <footer>
+                        <button name="wizard_train" string="Train!" type="object" class="oe_highlight"/> or
+                        <button string="Cancel" special="cancel" class="oe_link"/>
+                    </footer>
+
+                </form>
+            </field>
+        </record>
+
+    <act_window id="action_wizard_train"
+        key2="client_action_multi" name="Train Classifier"
+        res_model="classifier.trainer.wiz" src_model="classifier"
+        view_mode="form" target="new" view_type="form" />
+
+
+</data>
+</openerp>

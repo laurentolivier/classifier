@@ -1,0 +1,222 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+# 	* classifier
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-11-15 18:05+0000\n"
+"PO-Revision-Date: 2014-11-15 19:35+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: Fr\n"
+
+#. module: classifier
+#: view:classifier:0 field:classifier.train.feature,category_id:0
+#: field:classifier.trainer.wiz,category_id:0
+msgid "Category"
+msgstr "Catégorie"
+
+#. module: classifier
+#: view:classifier.guesser.wiz:0
+msgid "Guess"
+msgstr "Deviner"
+
+#. module: classifier
+#: field:classifier.category,document_ids:0
+msgid "Documents"
+msgstr "Documents"
+
+#. module: classifier
+#: model:ir.actions.act_window,name:classifier.action_wizard_train
+msgid "Train Classifier"
+msgstr "Entraînement"
+
+#. module: classifier
+#: field:classifier.train.feature,feature:0
+msgid "Feature"
+msgstr "Element"
+
+#. module: classifier
+#: field:classifier.category,child_ids:0
+msgid "Child Categories"
+msgstr "Catégories enfant"
+
+#. module: classifier
+#: field:classifier.category,name:0
+msgid "Category Name"
+msgstr "Nom"
+
+#. module: classifier
+#: model:ir.model,name:classifier.model_classifier_guesser_wiz
+msgid "Guessing wizard"
+msgstr "Guessing wizard"
+
+#. module: classifier
+#: view:classifier.trainer.wiz:0
+msgid "Train!"
+msgstr "Entraîner!"
+
+#. module: classifier
+#: model:ir.model,name:classifier.model_classifier_category
+msgid "Classifier Categories"
+msgstr "Catégories"
+
+#. module: classifier
+#: field:classifier,description:0
+msgid "Description"
+msgstr "Description"
+
+#. module: classifier
+#: model:ir.model,name:classifier.model_classifier_trainer_wiz
+msgid "Training wizard"
+msgstr "Training wizard"
+
+#. module: classifier
+#: view:classifier.category:0
+msgid "classifier.category"
+msgstr "classifier.category"
+
+#. module: classifier
+#: model:ir.model,name:classifier.model_classifier_train_feature
+msgid "Record of feature training . Used for analysis other objects"
+msgstr "Record of feature training . Used for analysis other objects"
+
+#. module: classifier
+#: field:classifier.category,classifier_id:0
+#: field:classifier.guesser.wiz,classifier_ids:0
+#: field:classifier.train.feature,classifier_id:0
+#: field:classifier.trainer.wiz,classifier_id:0
+msgid "Classifier"
+msgstr "Classifier"
+
+#. module: classifier
+#: view:classifier.trainer.wiz:0
+msgid "Train"
+msgstr "Train"
+
+#. module: classifier
+#: view:classifier.trainer.wiz:0
+msgid "Classifier Trainer"
+msgstr "Classifier Trainer"
+
+#. module: classifier
+#: field:classifier.category,active:0
+msgid "Active"
+msgstr "Actif"
+
+#. module: classifier
+#: view:classifier:0
+#: model:ir.actions.act_window,name:classifier.action_classifier_view
+#: model:ir.ui.menu,name:classifier.classifier_main
+msgid "Classifiers"
+msgstr "Classifiers"
+
+#. module: classifier
+#: view:classifier:0 field:classifier,category_ids:0
+#: view:classifier.category:0
+#: model:ir.actions.act_window,name:classifier.action_classifier_category_view
+#: view:ir.attachment:0 field:ir.attachment,category_ids:0
+#: model:ir.ui.menu,name:classifier.classifier_category_main
+msgid "Categories"
+msgstr "Catégories"
+
+#. module: classifier
+#: field:classifier.train.feature,counter:0
+msgid "Count"
+msgstr "Compteur"
+
+#. module: classifier
+#: field:classifier,train_features_ids:0
+msgid "Feature Trainings"
+msgstr "Feature Trainings"
+
+#. module: classifier
+#: view:classifier.guesser.wiz:0
+msgid "Classifier Guesser"
+msgstr "Classifier Guesser"
+
+#. module: classifier
+#: model:ir.actions.act_window,name:classifier.action_wizard_guess
+msgid "Guess Classifier"
+msgstr "Guess Classifier"
+
+#. module: classifier
+#: field:classifier.category,parent_id:0
+msgid "Parent Category"
+msgstr "Parent Category"
+
+#. module: classifier
+#: field:classifier.trainer.wiz,name:0
+msgid "Text for training"
+msgstr "Texte d'entraînement"
+
+#. module: classifier
+#: view:classifier:0 view:classifier.train.feature:0
+msgid "Trainings"
+msgstr "Entraînements"
+
+#. module: classifier
+#: field:classifier.category,complete_name:0
+msgid "Full Name"
+msgstr "Nom"
+
+#. module: classifier
+#: model:ir.model,name:classifier.model_classifier
+msgid "Analysis object used to class objects"
+msgstr "Analysis object used to class objects"
+
+#. module: classifier
+#: field:classifier,name:0
+msgid "name"
+msgstr "Nom"
+
+#. module: classifier
+#: field:classifier.category,parent_left:0
+msgid "Left parent"
+msgstr "Left parent"
+
+#. module: classifier
+#: constraint:classifier.category:0
+msgid "Error ! You can not create recursive categories."
+msgstr "Erreur, vous ne pouvez pas créer de catégorie récursive."
+
+#. module: classifier
+#: view:classifier.guesser.wiz:0
+msgid "Guess!"
+msgstr "Deviner!"
+
+#. module: classifier
+#: field:classifier.category,counter:0
+msgid "Training counter"
+msgstr "Compteur"
+
+#. module: classifier
+#: help:classifier.category,active:0
+msgid "The active field allows you to hide the category without removing it."
+msgstr "The active field allows you to hide the category without removing it."
+
+#. module: classifier
+#: view:classifier.guesser.wiz:0 view:classifier.trainer.wiz:0
+msgid "Cancel"
+msgstr "Annuler"
+
+#. module: classifier
+#: model:ir.model,name:classifier.model_ir_attachment
+msgid "ir.attachment"
+msgstr "ir.attachment"
+
+#. module: classifier
+#: view:classifier.guesser.wiz:0 view:classifier.trainer.wiz:0
+msgid "or"
+msgstr "ou"
+
+#. module: classifier
+#: field:classifier.category,parent_right:0
+msgid "Right parent"
+msgstr "Right parent"
